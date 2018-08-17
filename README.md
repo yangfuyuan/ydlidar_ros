@@ -1,23 +1,36 @@
+
+![YDLIDAR](images/index-G4.jpg  "YDLIDAR")
+
+
 YDLIDAR ROS PACKAGE V1.3.7
 =====================================================================
 
 ROS node and test application for YDLIDAR
 
-Visit EAI Website for more details about YDLIDAR.
+Visit EAI Website for more details about [YDLIDAR](http://www.ydlidar.com/) .
 
 How to build YDLIDAR ros package
 =====================================================================
     1) Clone this project to your catkin's workspace src folder
+    
     --$ git clone https://github.com/yangfuyuan/ydlidar_ros
+    
     --$ cd ydlidar_ros/ydlidar_sdk
+    
     --$ git submodule init
+    
     --$ git submodule update
 
     2) Running catkin_make to build ydlidar_node and ydlidar_client
-    3) Create the name "/dev/ydlidar" for YDLIDAR
+    3) Create the alias "/dev/ydlidar" for YDLIDAR
+    
     --$ roscd ydlidar/startup
+    
     --$ sudo chmod 777 ./*
+    
     --$ sudo sh initenv.sh
+    
+    4) After the exceution is completed, the radar is plugged in again.
 
 How to run YDLIDAR ros package
 =====================================================================
@@ -25,15 +38,15 @@ There're two ways to run YDLIDAR ros package
 
 1. Run YDLIDAR node and view in the rviz
 ------------------------------------------------------------
-roslaunch ydlidar lidar_view.launch
+	$ roslaunch ydlidar lidar_view.launch
 
 You should see YDLIDAR's scan result in the rviz.
 
 2. Run YDLIDAR node and view using test application
 ------------------------------------------------------------
-roslaunch ydlidar lidar.launch
+	$ roslaunch ydlidar lidar.launch
 
-rosrun ydlidar ydlidar_client
+	$ rosrun ydlidar ydlidar_client
 
 You should see YDLIDAR's scan result in the console
 
@@ -105,6 +118,9 @@ frequency (double, default: 7)
     the LIDAR scanning frequency.
 
 
+Dependencies
+=====================================================================
+1.[ydlidar_sdk](https://github.com/yangfuyuan/ydlidar_sdk)
 
 Upgrade Log
 =====================================================================

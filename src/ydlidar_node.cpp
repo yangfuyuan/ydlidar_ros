@@ -166,6 +166,8 @@ int main(int argc, char * argv[]) {
 
              }catch(CorruptedDataException& e) {
                  std::cout<< e.what()<<std::endl;
+	     }catch(DeviceInformationException& e) {
+                 std::cout<< e.what()<<std::endl;
 
              }catch(DeviceException& e) {
                  std::cerr<< e.what()<<std::endl;
@@ -179,6 +181,8 @@ int main(int argc, char * argv[]) {
     }catch(TimeoutException& e) {
         std::cout<< e.what()<<std::endl;
     }catch(CorruptedDataException& e) {
+        std::cout<< e.what()<<std::endl;
+    }catch(DeviceInformationException& e) {
         std::cout<< e.what()<<std::endl;
     }catch(DeviceException& e) {
         std::cerr<< e.what()<<std::endl;
